@@ -1,0 +1,355 @@
+/* CUSTOM PROPS */
+:root{
+  --primary: #ea625c;
+  --primary-dark: #c9514c;
+  --text-color: #333;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold.woff2") format("woff2"),
+  url("Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.woff2") format("woff2"),
+  url("Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+/* GLOBAL */
+html{
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto" "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+*:focus{
+  outline: 2px dashed var(--primary);
+  outline-offset: 2px;
+}
+
+/* CONTAINER */
+.container{
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  min-width: 260px;
+  border: 0;
+  padding: 12px 38px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--primary);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.button:hover{
+  background-color: var(--primary-dark);
+}
+.button:active{
+  opacity: 0.6;
+}
+
+/* BUTTON */
+.lined-link{
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lined-link::before{
+  width: 40px;
+  height: 3px;
+  margin-right: 10px;
+  background-color: var(--primary);
+  content: "";
+  transition: width 0.3s ease;
+}
+
+.lined-link:hover::before{
+  width: 60px;
+}
+
+/* SITE-HEADER */
+.site-header{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.site-header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header-logo{
+  /* display: flex;
+  align-items: center; */
+  margin-right: auto;
+  transition: opacity 0.3s ease;
+}
+
+.site-header-logo:hover{
+  opacity: 0.8;
+}
+.site-header-logo:active{
+  opacity: 0.6;
+}
+
+.site-header-logo-img{
+  display: block;
+  width: 35px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sitenav {
+  margin-right: 40px;
+}
+
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+.sitenav-items:not(:last-child){
+  margin-right: 30px;
+}
+
+
+.sitenav-link {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+  font-weight: 400;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: border-bottom 0.3s ease;
+}
+.sitenav-link:hover{
+  border-bottom: 3px solid var(--text-color);
+}
+
+.search-form-input {
+  border: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--text-color);
+  text-decoration: none;
+  color: #666666 ;
+}
+
+
+/* MAIN-CONTENT */
+.main-content{
+  flex-grow: 1;
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #ddd;
+  background-image: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left calc(50% + 550px) bottom;
+}
+
+
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+  margin-right: auto;
+}
+
+.lead-cta-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 1.2;
+  color: #000;
+}
+.lead-cta-white .lead-cta-heading{
+  color: #fff;
+}
+
+
+.lead-cta-text {
+  border-left: 3px solid #888888;
+  padding-left: 37px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #777;
+}
+.lead-cta-white .lead-cta-text{
+  border-color: #fff;
+  color: #fff;
+}
+
+/* FEATURES */
+.features{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+
+.features-list {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.features-item {
+  width: 288px;
+}
+
+.features-item:not(:last-child){
+  margin-right: 80px;
+}
+.features-heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: "Roboto" "Arial" sans-serif;
+  text-transform: uppercase;
+  color: #222;
+}
+.features-text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto" "Arial" sans-serif;
+  color: #333333;
+}
+
+.features-divider{
+  width: 8px;
+  height: 8px;
+  border: 0;
+  margin: 0;
+  background-color: #ddd;
+  box-shadow: 16px 0 0 #ddd,
+    32px 0 0 #ddd;
+}
+
+
+/* PROMO */
+.promo{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container{
+  display: flex;justify-content: space-between;
+  align-items: center;
+}
+
+.promo-img{
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* RANNERS */
+.ranners{
+  padding-top: 240px;
+  padding-bottom: 240px;
+  height: 830px;
+  background-image: url(../img/runners\ 1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-lead-cta{
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero{
+    background-image: url(../img/intro-bg@2x.jpg);
+  }
+}
